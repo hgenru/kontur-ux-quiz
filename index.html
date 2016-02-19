@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Я ♥ UX</title>
+    <link rel="stylesheet" href="/index.css">
+</head>
+<body>
+
+<main class="pages-container">
+    <div class="pages-wrap" data-bind="style: {transform: 'translateX(-'+ currentPage() * 100 +'%)'}">
+        <section class="page">
+            <h1>Ребята, я не умею в UX и сейчас я вам это докажу</h1>
+            <button data-bind="click: function() {nextPage();}">Погнали!</button>
+        </section>
+
+        <section class="page">
+            <h1>Level 1</h1>
+            <h2>Мне кажется, что в этой кнопке сатана</h2>
+            <button class="level1-button" data-bind="click: function() {nextPage();}">Дальше!</button>
+        </section>
+
+        <section class="page page--level2">
+            <h1>Level 2</h1>
+            <h2>Дублирование функционала — это хорошо!</h2>
+
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button><br>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+            <button class="level2-button">Далее</button>
+
+            <div class="level2-link-wrap">
+                <a href class="level2-link" data-bind="click: function() {nextPage();}">Далее</a>
+            </div>
+        </section>
+
+        <section class="page">
+            <h1>Level 3</h1>
+            <h2>Не дадим пользователю совершить ошибку!</h2>
+            <button data-bind="click: function() {level3Next();}">Направится далее</button>
+        </section>
+
+        <section class="page">
+            <h1>Level 4</h1>
+            <h2>Я ХОЧУ ЗНАТЬ О ВАС ВСЁ!</h2>
+
+            <div class="level4-input"><label>Ваше имя: <br><input type="text" data-bind="textInput: level4.field1"/></label></div>
+            <div class="level4-input"><label>Ваша фамилия: <br><input type="text" data-bind="textInput: level4.field2"/></label></div>
+            <div class="level4-input"><label>Ващ пол: <br><input type="text" data-bind="textInput: level4.field3"/></label></div>
+            <div class="level4-input"><label>Ваш возраст: <br><input type="text" data-bind="textInput: level4.field4"/></label></div>
+            <div class="level4-input"><label>Email: <br><input type="text" data-bind="textInput: level4.field5"/></label></div>
+            <div class="level4-input"><label>Придумайте пароль: <br><input type="text" data-bind="textInput: level4.field6"/></label></div>
+            <div class="level4-input"><label>Напишите рассказ о себе: <br><textarea type="text" data-bind="textInput: level4.field7"/></textarea></label></div>
+
+            <button data-bind="click: function() {level4Next();}">Отправить данные</button>
+        </section>
+
+        <section class="page">
+            <h1>Вот и всё!</h1>
+            <h3>Надеюсь я вас убедил</h3>
+
+            <h2>Научите меня UX!</h2>
+
+            <p>Данные я ваши никуда не отправлял, да и сервер мне писать лениво было</p>
+            <p>P.S. Так верстают только мудаки</p>
+
+            <a href="mailto:me@hgen.ru">me@hgen.ru</a>
+        </section>
+    </div>
+</main>
+
+<script src="//yastatic.net/es5-shims/0.0.2/es5-shims.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/es6-promise/3.0.2/es6-promise.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/knockout/3.4.0/knockout-min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/knockout-validation/2.0.3/knockout.validation.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/fetch/0.10.1/fetch.min.js"></script>
+
+<script src="index.js"></script>
+
+</body>
+</html>

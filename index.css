@@ -1,0 +1,131 @@
+body
+{
+    margin: 0;
+    padding: 0;
+}
+
+body *
+{
+    box-sizing: border-box;
+}
+
+.pages-container
+{
+    max-width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.pages-wrap
+{
+    transition: transform 0.4s ease-out;
+    transition-delay: 0.2s;
+    font-size: 0;
+}
+
+.pages-wrap > *
+{
+    font-size: initial;
+}
+
+.page
+{
+    width: 100%;
+    display: inline-block;
+    vertical-align: middle;
+    overflow: hidden;
+    white-space: normal;
+    padding: 10px;
+}
+
+button
+{
+    font-size: 24px;
+}
+
+.level1-button
+{
+    font-size: 42px;
+    margin: 300px;
+    animation: level1-button 0.2s infinite;
+    animation-play-state: paused;
+}
+
+.level1-button:hover
+{
+    animation-play-state: running;
+}
+
+
+.page--level2
+{
+    height: 90vh;
+}
+
+.level2-button
+{
+    font-size: 30px;
+}
+
+.level2-link-wrap
+{
+    position: absolute;
+    text-align: right;
+    width: 90%;
+    bottom: 0;
+}
+
+.level2-link
+{
+    font-size: 16px;
+}
+
+.level4-input
+{
+    margin-bottom: 3px;
+}
+
+.validationMessage
+{
+    display: inline-block;
+    margin-left: 5px;
+    font-size: 24px;
+    color: red;
+}
+
+@keyframes level1-button
+{
+    10% {
+        transform: translateX(50px) translateY(-30px);
+    }
+    20% {
+        transform: translateX(90px) translateY(-70px);
+    }
+    30% {
+        transform: translateX(100px) translateY(-40px);
+    }
+    40% {
+        transform: translateX(90px) transform: translateY(-10px);
+    }
+    50% {
+        transform: translateX(70px) transform: translateY(10px) scale(200%);
+    }
+    60% {
+        transform: translateX(70px) transform: translateY(10px);
+    }
+    70% {
+        transform: translateX(-10px) transform: translateY(30px);
+    }
+    80% {
+        transform: translateX(-30px) transform: translateY(50px);
+    }
+    80% {
+        transform: translateX(-50px) transform: translateY(60px);
+    }
+    90% {
+        transform: translateX(-70px) transform: translateY(30px);
+    }
+    100% {
+        transform: translateX(-40px) transform: translateY(10px) scale(100%);
+    }
+}
