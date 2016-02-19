@@ -72,7 +72,7 @@ function AppViewModel() {
             this.level4Group.showAllMessages(true);
         } else {
             if (this.level4FirstTry) {
-                alert('При отправке данных на сервер произошла ошибка. Пожалуйста, попробуйте ещё раз!');
+                alert('При отправке данных на сервер произошла ошибка. Но вы обязательно должны попробовать ещё раз!');
                 this.level4Reset();
                 this.level4FirstTry = false;
             } else {
