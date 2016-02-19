@@ -8,6 +8,14 @@ function AppViewModel() {
         this.currentPage(++currentPage);
     };
 
+    this.fakeNext = function () {
+        alert('Твоя принцесса в другом замке!');
+    }
+
+    this.fakeNext2 = function () {
+        alert('Ну посмотри ты уже в правый нижний угол, это же очевидно!');
+    }
+
     this.level3Next = function() {
         var questions = [
             'Вы уверены в своем решении?',
