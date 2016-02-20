@@ -10,13 +10,13 @@
     <div class="pages-wrap" data-bind="style: {transform: 'translateX(-'+ currentPage() * 100 +'%)'}">
         <section class="page">
             <h1>Ребята, я не умею в UX и сейчас я вам это докажу</h1>
-            <button data-bind="click: function() {nextPage();}">Погнали!</button>
+            <button data-bind="click: goGo(1)">Погнали!</button>
         </section>
 
         <section class="page">
             <h1>Level 1</h1>
             <h2>Мне кажется, что в этой кнопке сатана</h2>
-            <button class="level1-button" data-bind="click: function() {nextPage();}">Дальше!</button>
+            <button class="level1-button" data-bind="click: goGo(2)">Дальше!</button>
         </section>
 
         <section class="page page--level2">
@@ -42,7 +42,7 @@
             <button class="level2-button" data-bind="click: function() {fakeNext();}">Далее</button>
 
             <div class="level2-link-wrap">
-                <a href class="level2-link" data-bind="click: function() {nextPage();}">Далее</a>
+                <a href class="level2-link" data-bind="click: goGo(3)">Далее</a>
             </div>
         </section>
 

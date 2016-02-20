@@ -3,6 +3,13 @@
 function AppViewModel() {
     this.currentPage = ko.observable(0);
 
+    this.goGo = function(page) {
+        var self = this;
+        return function() {
+            self.currentPage(page);
+        };
+    };
+
     this.nextPage = function() {
         var currentPage = this.currentPage();
         this.currentPage(++currentPage);
@@ -28,7 +35,7 @@ function AppViewModel() {
         for (var i = 0; i < questions.length; i++) {
             answer = confirm(questions[i]);
             if (!answer) {
-                alert('И ради этого был проделан такой путь!?');
+                alert('И ради этого был проделан такой путь!? Заново!');
                 location.reload();
                 break;
             }
